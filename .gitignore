@@ -1,0 +1,8 @@
+# .gitignore file
+
+# Ignore protected directories
+*.zip
+*.webloc
+
+# Ignore system file
+.DS_STORE
