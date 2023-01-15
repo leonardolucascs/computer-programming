@@ -1,6 +1,6 @@
 # .gitignore file
 
-# Ignore protected directories
+# Ignore protected directories - files
 *.zip
 *.webloc
 
