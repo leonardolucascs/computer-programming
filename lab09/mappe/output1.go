@@ -25,6 +25,10 @@ func main() {
 		fmt.Println(k, "->", v)
 	}
 
-	// Another print map for-range cycle
 
+	// Another print map for-range cycle
+	// Different behavior
+	for k := range m {
+		fmt.Println(k, "->", m[k])
+	}
 }
