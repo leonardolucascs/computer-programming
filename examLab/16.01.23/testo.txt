@@ -1,0 +1,68 @@
+ESERCIZIO FILTRO: Media cifre
+	Letto da riga di comando un dato numero > 10:
+		i. ricavare la media M delle singole cifre che compongono numero
+		ii. stampare le singole cifre > M
+
+	go run esercizio_filtro.go 35367
+	Expected output: 567
+
+
+
+
+ESERCIZIO1: Codifica messaggio segreto
+	Data da riga di comango una stringa
+
+	Codificare una fuzione che restituisca il messaggio nascosto tra le parentesi tonde.
+
+	Vincoli:
+		i.	Si considerino sottostringhe del messaggio, tutte le stringhe contenute dalle parentesi '(' e ')'.
+		ii.	Sono validi solo i messaggi che iniziano racchiusi tra '(' e terminano con ')', laddove ci siano parentesi
+			all'interno del messaggio questo è da considerare non valido.
+		iii.	Qualora ci fossero "()", ossia stringhe vuote, si considera lo spazio " " come sottostringa
+		iv.	[ ...non implementato] Non sono e non devono essere presenti spazi nella stringa di input, 
+			la singola runa deve essere passata alla funzione del package unicode isSpace(runa) bool 
+
+
+		input 	=>	"fd(((sw(we))()(o)(s)(ciao)"
+		output	=>	"we o s ciao"
+
+		go run esercizio1.go "()ssas(sd(:-D)sdwqw(t)(r)(o)(v)((a)))rer((to)" 
+		Expected output: " :-D t r o v a to"
+
+		go run es.go "(ciao)èfgv(()ffg((tsa(Sara)df-()fsf(:-D)"
+		Expected output: "ciao  Sara  :-D"
+
+
+
+
+
+ESERCIZIO2: Trova mcm
+	Dati 2 numeri da riga di comando, implementare:
+		i. func Eprimo(int) bool, ritorna true-false se il numero è primo
+		ii. func Scomponi(n int) map[int]int, scompone n nei suoi fattori primi
+			-> stampare a video scomposizione
+		iii. func mcm (n1 map, n2 map [int]int) -> restituisce mcm calcolato tra n1 e n2
+		
+	
+	go run esercizio_2.go 350 100
+
+	Expected output:
+		350: 7^2 x 5^1 x 2^1
+		100: 5^2 x 2^2
+	
+		mcm: 700
+
+
+ESERCIZI3: punti e tragitti
+Definire struct punto dato da coordinate x, y
+Definire distanza tra due punti
+
+( .... penso che poi abbia chiesto )
+Definire tragitto più breve tra due punti a, b passando per i punti intermedi
+a(,) b(,) c(,) d(,) e(,) f(,) g(,)
+
+per arrivare da a -> f tragitto migliore, considerando le distanza tra i vari punti
+
+pt. 1
+pt. 2
+pt. 3
