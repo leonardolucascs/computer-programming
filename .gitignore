@@ -1,8 +1,31 @@
 # .gitignore file
 
+# Blocklist files/folders in same directory as the .gitignore file
+/*
+
+# Include list some files
+!.gitignore
+!README.md
+
+# Ignore all files named .DS_Store or ending with .log
+*.DS_Store
+*.log
+
+# Includelist folders
+
+## Questo dice a git di versionare solo la cartella prof.Bianchessi
+!aa22.23
+aa22.23/*
+!aa22.23/lab
+aa22.23/lab/*
+!aa22.23/lab/prof.Bianchessi
+
+
+
 # Ignore protected directories - files
 *.zip
 *.webloc
 
 # Ignore system file
 .DS_STORE
+
