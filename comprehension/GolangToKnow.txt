@@ -1,0 +1,5 @@
+-	The copy function supports copying between slices of different lengths (it will copy only up to the smaller number of elements)
+
+- For operations between untyped constants of different types, the result would be in the kind that appears later in this list: integer, rune, floating-point, complex.
+	When dividing variables, ensure both are converted to the float64 type first or the type they are.
+

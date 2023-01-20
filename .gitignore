@@ -20,7 +20,13 @@ aa22.23/*
 aa22.23/lab/*
 !aa22.23/lab/prof.Bianchessi
 
+# track comprehension/
+!comprehension
 
+# track testi/TWTG/
+!testi
+testi/*
+!testi/TWTG
 
 # Ignore protected directories - files
 *.zip
