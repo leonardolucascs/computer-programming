@@ -1,9 +1,13 @@
-// Comprensione e gestione: slice
+// Comprensione e gestione: Slice
 
 package main
 
 func main(){
 	// Dichiarazione
+
+
+
+
 
 
 
@@ -16,12 +20,23 @@ func main(){
 	// error: invalid operation: [...]int{…} (value of type [3]int) (slice of unaddressable value)
 
 
+
+
+
 	// Utilizzo
 
 
 
 
+
+
+
+
 	// Iterazione
+
+
+
+
 
 
 

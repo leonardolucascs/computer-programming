@@ -1,4 +1,4 @@
-// Comprensione e gestione: slice
+// Comprensione e gestione: Mappe
 
 package main
 
@@ -16,7 +16,10 @@ func main(){
 	// error: invalid operation: [...]int{…} (value of type [3]int) (slice of unaddressable value)
 
 
+
+
 	// Utilizzo
+
 
 
 
@@ -24,16 +27,25 @@ func main(){
 	// Iterazione
 
 
-	// Ordinamento per valore
-
-
-	// Ordinamento per chiave
 
 
 	// Confronto
 
 
 
+
+
+	// Ordinamento per valore
+
+
+
+
+	// Ordinamento per chiave
+
+
+
+
+	// trova elemento
 }
 
 

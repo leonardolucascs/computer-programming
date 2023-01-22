@@ -1,7 +1,9 @@
 package main
 
-import "fmt"
-import "unicode/utf8"
+import (
+	"fmt"
+	"unicode/utf8"
+)
 
 func main() {
 	
