@@ -16,9 +16,9 @@ func main() {
 		numeri = append(numeri, uint(tmp))
 	}
 
-	//fmt.Println(numeri)
+	fmt.Println(numeri)
 
-	//fmt.Println(mcm(13, 78))
+	fmt.Println(mcm(13, 78))
 	fmt.Println(mcm_sequenza(numeri))
 
 }
