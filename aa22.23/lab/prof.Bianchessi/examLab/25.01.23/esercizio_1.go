@@ -1,16 +1,12 @@
 /*
 
-	
 	Scrivere un programma che legga da standard input una stringa 
 	di caratteri arbitrari in cui  possono essere presenti caratteri di spaziatura.
 
 	Il programma deve stampare a video il messaggio "la frase è palindroma" nel caso in cui
 	la frase sia palindroma e "la frase non è palindroma" altrimenti.
 
-	
 */
-
-
 
 package main
 
@@ -69,16 +65,6 @@ func main(){
 	} else {
 		fmt.Println("la frase non è palindroma")
 	}
-
-
-
-
-
-
-
-
-
-
 }
 
 
