@@ -64,26 +64,49 @@ func main() {
 		numeri = append(numeri, uint(tmp))
 	}
 
-	fmt.Println(numeri)
+//	fmt.Println(numeri)
 //	fmt.Println(contaOccorrenze(numeri)
 //	fmt.Println(genera(contaOccorrenze(numeri)))
-	fmt.Println(MCD(14, 250))
-	fmt.Println(mcm(13, 78))
-	fmt.Println(mcm_sequenza(numeri))
+//	fmt.Println(MCD(14, 250))
+//	fmt.Println(mcm(13, 78))
 
-	// len(genera) >= len(numeri)
-	// es. 2 3 3 => len(genera)=2 >= len(numeri)=3
+	fmt.Print("mcm = ")
 
+	// calcola mcm
+	if len(genera(contaOccorrenze(numeri))) >= 2{
+		fmt.Println(mcm_sequenza(genera(contaOccorrenze(numeri))))
+	} else {
+		fmt.Println(-1)
+	}
 }
 
 
-func contaOccorrenze(numeri []uint) {
+func contaOccorrenze(numeri []uint) map[uint]uint {
+	var mapOcc = make(map[uint]uint)
 
+	for _, v := range numeri {
+		if _, ok := mapOcc[v]; ok {
+			mapOcc[v]++
+		} else {
+			mapOcc[v] = 1
+		}
+	}
+
+	return mapOcc
 }
 
-func genera(numeri []uint){
+func genera(occorrenze map[uint]uint) []uint {
+	var output []uint
 
+	for key, value := range occorrenze {
+		if value == 1 {
+			output = append(output, key)
+		}
+	}
+
+	return output
 }
+
 
 func MCD(a, b uint) uint {
 	if b == 0 {
@@ -100,10 +123,10 @@ func mcm(a, b uint) uint {
 
 func mcm_sequenza(numeri []uint) int {
 
+	/*
 	// non serve alcun tipo di ciclo !!!
 	// Le "iterazioni cicliche" vengono "svolte" dalle chiamate ricorsive
-
-	/*
+	
 	var mcm int
 
 	for i:=0; i<len(numeri)-1; i++{
@@ -117,30 +140,31 @@ func mcm_sequenza(numeri []uint) int {
 	}
 	*/
 
-	fmt.Println("\nstato iniziale: ", numeri)
 
-	if len(numeri) < 2{
+//	fmt.Println("\nstato iniziale: ", numeri)
+
+	if len(numeri) < 2 {
 		return -1	// necessario se non entra nel for per len(numeri)<2
 	} else {
 		// caso base mcm(n1, n2)
-	if len(numeri)==2{
-		fmt.Printf("...attivazione caso base: mcm(%d, %d)\n\n", numeri[0], numeri[1])
-		
-		output := mcm(numeri[0], numeri[1])
+		if len(numeri) == 2 {
+//			fmt.Printf("...attivazione caso base: mcm(%d, %d)\n\n", numeri[0], numeri[1])
+			
+			output := mcm(numeri[0], numeri[1])
 
-		fmt.Println("mcm(", numeri[0], ", ", numeri[1] ,") => ", output)
+//			fmt.Println("mcm(", numeri[0], ", ", numeri[1] ,") => ", output)
 
-		return int(output)	// int( mcm(numeri[0], numeri[1]) )
-	}else{	// passo induttivo:
-		fmt.Println("...chiamata funzione ricorsiva: mcm(", numeri[:len(numeri)-1], ")")
+			return int(output)	// int( mcm(numeri[0], numeri[1]) )
+		} else {	// passo induttivo:
+//			fmt.Println("...chiamata funzione ricorsiva: mcm(", numeri[:len(numeri)-1], ")")
 
-		tmp := uint(mcm_sequenza( numeri[:len(numeri)-1] ) )
-		op := mcm( numeri[len(numeri)-1], tmp )
-		
-		fmt.Println("mcm(", numeri[len(numeri)-1], ", mcm(", numeri[:len(numeri)-1] ,") )")
-		fmt.Println("mcm(", numeri[len(numeri)-1],", ", tmp ,") =>", op)
-		
-		return int(op)	// int( mcm( numeri[len(numeri)-1], uint(mcm_sequenza( numeri[:len(numeri)-1] ) ) ) )
-	}
+			tmp := uint(mcm_sequenza( numeri[:len(numeri)-1] ) )
+			op := mcm( numeri[len(numeri)-1], tmp )
+			
+//			fmt.Println("mcm(", numeri[len(numeri)-1], ", mcm(", numeri[:len(numeri)-1] ,") )")
+//			fmt.Println("mcm(", numeri[len(numeri)-1],", ", tmp ,") =>", op)
+			
+			return int(op)	// int( mcm( numeri[len(numeri)-1], uint(mcm_sequenza( numeri[:len(numeri)-1] ) ) ) )
+		}
 	}
 }

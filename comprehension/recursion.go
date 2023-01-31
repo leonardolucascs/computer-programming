@@ -118,7 +118,7 @@ func mcm_sequenza(numeri []uint) int {
 
 	for i:=0; i<len(numeri)-1; i++{
 		// caso base mcm(a, b)
-		if len(numeri) == 2 {
+		if len(numeri) == 2 {ccd
 			return int(mcm(numeri[i], numeri[i+1]))	// ERROR: Cannot call non-function mcm => value type int
 													// shadowing variable name & function name!!!
 		} else {

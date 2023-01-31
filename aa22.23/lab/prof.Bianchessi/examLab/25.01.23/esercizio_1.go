@@ -24,7 +24,7 @@ func main(){
 
 	fmt.Println(input)
 
-	var str string
+	str := input[:len(str)-1]
 
 	// Trasforma la stringa in caratteri lowercase
 	for _, v := range input {
@@ -34,6 +34,9 @@ func main(){
 
 	// str = str[1:]
 	fmt.Println("str: \"",str,"\"")
+	
+
+	fmt.Println("str: \"", str,"\"")
 
 	// indici ricerca
 	inizio := 0
