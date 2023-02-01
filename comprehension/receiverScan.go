@@ -20,6 +20,7 @@ type User struct {
 
 // newPet is a method of type *User, can be invoked by any object of type *User, in this case p2
 // p2.newPet(), it's called receiver
+
 func (p2 *User) newPet() {
 	fmt.Println(*p2, "underlying value of p2 before")
 	p2.Pet = append(p2.Pet, "Lucy")
