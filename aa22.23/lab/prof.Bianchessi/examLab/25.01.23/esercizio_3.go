@@ -87,8 +87,47 @@
 
 package main
 
+import "os"
+import "fmt"
+import "bufio"
+import "io"
+
+inputReader := bufio.NewReader(os.Stdin)
+input, _ inputReader.ReadString('\n')
+
+type Orario struct {
+	ora uint
+	minuto uint
+}
+
+type Evento struct {
+	inizio Orario
+	fine Orario
+	nome string
+}
 
 func main() {
 
-	
+	inputFile, _ := os.Open("nome_file.txt")
+
+	defer inputFile.Close()
+
+	inputReader := bufio.NewReader(inputFile)
+
+	for{
+		inputString, readError := inputReader.ReadString('\n')
+		if readError == io.EOF {
+			return
+		}
+		fmt.Printf("input %s", inputString)
+	}
+}
+
+func NuovaAgenda() (agenda []Evento) {
+	var tmp Evento
+
+	inputReader := bufio.NewReader(os.Stdin)
+	input, _ := inputReader.ReadString('CTRL+D')
+
+	agenda = append(agenda, tmp)
 }
