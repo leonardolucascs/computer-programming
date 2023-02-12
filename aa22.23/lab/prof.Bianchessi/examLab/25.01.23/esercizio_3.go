@@ -92,9 +92,6 @@ import "fmt"
 import "bufio"
 import "io"
 
-inputReader := bufio.NewReader(os.Stdin)
-input, _ inputReader.ReadString('\n')
-
 type Orario struct {
 	ora uint
 	minuto uint
@@ -108,11 +105,42 @@ type Evento struct {
 
 func main() {
 
+	/*
+	// Lettura File
+
 	inputFile, _ := os.Open("nome_file.txt")
 
 	defer inputFile.Close()
 
 	inputReader := bufio.NewReader(inputFile)
+
+	*/
+
+	// Lettura multiple righe da stdin
+	scanner := bufio.NewScanner(os.Stdin)
+	for {
+		fmt.Print("Enter Text: ")
+		// reads user input until \n by default
+		scanner.Scan()
+		// Holds the string that was scanned
+		text := scanner.Text()
+		if len(text) != 0 {
+			fmt.Println(text)
+		} else {
+			// exit if user entered an empty string
+			break
+		}
+
+	}
+
+	// handle error
+	if scanner.Err() != nil {
+		fmt.Println("Error: ", scanner.Err())
+	}
+
+
+	// Versione mia...
+	inputReader := bufio.NewReader(os.Stdin)
 
 	for{
 		inputString, readError := inputReader.ReadString('\n')
@@ -129,5 +157,5 @@ func NuovaAgenda() (agenda []Evento) {
 	inputReader := bufio.NewReader(os.Stdin)
 	input, _ := inputReader.ReadString('CTRL+D')
 
-	agenda = append(agenda, tmp)
+	agenda = append(agenda, )
 }
