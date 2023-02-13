@@ -119,7 +119,7 @@ func main() {
 	// Lettura multiple righe da stdin
 	scanner := bufio.NewScanner(os.Stdin)
 	for {
-		fmt.Print("Enter Text: ")
+		fmt.Print("Inserisci input: ")
 		// reads user input until \n by default
 		scanner.Scan()
 		// Holds the string that was scanned
