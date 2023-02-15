@@ -35,8 +35,7 @@ import (
 func main() {
 	var strOut, tmp string
 	var isOpen bool = false
-	input := string(os.Args[1])
-	
+	input := os.Args[1]	// ?! string(os.Args[1]) è già una stringa os.Args
 	
 
 	for inizio:=0; inizio < len(input); inizio++ {

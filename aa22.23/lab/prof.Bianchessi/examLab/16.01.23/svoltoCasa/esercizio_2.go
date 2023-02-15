@@ -166,7 +166,8 @@ func mcm(n1Map map[int]int, n2Map map[int]int) int {
 
 	// iterate over n2Map, check equal key or save new value
 	for k, v := range n2Map {
-		if _, isPresent := mcmMap[k]; isPresent {
+		if _, isPresent := mcmMap[k]; isPresent {	// se presente la stessa chiave
+			// Svolgimento tramite switch...
 			switch(true) {
 			case n1Map[k] < v :
 				mcmMap[k] = v
@@ -180,14 +181,14 @@ func mcm(n1Map map[int]int, n2Map map[int]int) int {
 
 			// II version with if-else statement
 				// if n1Map[k] < v{
-				// 	...
+				// 	...aggiorna valore relativo alla chiave k in mcmMap, valore n2Map[k] > n1Map[k]
 				// } else if n1Map[k] > v {
 				//	...
 				// } else {
 				//	...
 				// }
 			}
-		} else {
+		} else { // altrimenti salva valore per chiave diversa
 			mcmMap[k] = v
 		}
 	}
@@ -195,13 +196,13 @@ func mcm(n1Map map[int]int, n2Map map[int]int) int {
 	//fmt.Println(mcmMap)
 
 	mcm := 1
+
 	for k, v := range mcmMap {
 		mcm *= nPow(k,v)
 	}
 
 	return mcm
 }
-
 
 
 
