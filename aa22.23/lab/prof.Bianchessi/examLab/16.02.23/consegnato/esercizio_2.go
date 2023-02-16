@@ -45,6 +45,7 @@ func LeggiMultiInsiemi() []map[int]int{
 	return multiIns
 }
 
+// Parser per stringa letta in Mappa valori-occorrenze
 func convertiInput(str []string) map[int]int {
 	var tmpMap map[int]int
 
