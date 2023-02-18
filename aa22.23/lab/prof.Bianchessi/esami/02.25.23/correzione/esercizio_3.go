@@ -18,7 +18,11 @@ type Punto struct{
 
 func main() {
 	
-	tragitto := []Punto{{"A", 10, 11.3},{"B", 11, -5.2},{"C", 5, 3.4}}
+	tragitto := []Punto{
+		{"A", 10, 11.3},
+		{"B", 11, -5.2},
+		{"C", 5, 3.4}
+	}
 	
 	//fmt.Println(NuovoTragitto())
 	//fmt.Println("\ndx:", Distanza(punti[0], punti[1]))
