@@ -37,4 +37,6 @@ func main() {
 	//													   >4  -> per eccesso
 	fmt.Println(math.Round(x*100)/100) // 12.35 (round to nearest)	
 	
+	// Float to string
+	s := fmt.Sprintf("%.2f", 12.3456) // s == "12.35"
 }

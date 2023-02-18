@@ -38,9 +38,12 @@ func main(){
 
 
 
+	
 
+	// Fill up a empty slice []int {}
 
-
+	// Fill up an already initialize slice
+	//  for i := range mySlice { mySlice[i] = default }
 
 }
 
