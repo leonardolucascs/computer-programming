@@ -19,6 +19,10 @@ func main() {
 	fmt.Println(IntersecaMultiInsiemi(A, B))
 	fmt.Println(UnisciMultiInsiemi(A,B))
 
+	// ATTENZIONE: FUNZIONI CREATE CORRETTE E OPERANTI MA MAIN() INCOMPLETO
+	// 				NON SI RIESCE A VERIFICARE L'EFFETTIVO FUNZIONAMENTO DELLE FUNZIONI
+	//				NON SEGUE L'ESECUZIONE DATA DALLA TRACCIA D'ESAME
+
 }
 
 // Leggi input e salva in map
@@ -51,7 +55,7 @@ func convertiInput(str []string) map[int]int {
 	var tmpMap map[int]int
 
 	// Uncomment riga sotto per evitare errore-> panic: assignment to entry in nil map
-	// tmpMap = map[int]int{}	// ho usato questa nel esame
+	tmpMap = map[int]int{}	// ho usato questa nel esame
 	// ...Altrimenti 
 	// tmpMap := make(map[int]int)
 	// You have to initialize the map using the make function before you can add any elements
@@ -62,7 +66,7 @@ func convertiInput(str []string) map[int]int {
 
 		// pattern comma-ok per verificare presenza chiave, in questo caso è un numero la chiave
 		if _, ok := tmpMap[n]; ok {
-			tmpMap++
+			tmpMap[n]++
 		} else {
 			tmpMap[n] = 1
 		}
@@ -89,7 +93,7 @@ func IntersecaMultiInsiemi(A, B map[int]int)(AB map[int]int) {
 }
 
 // Unisci multiInsiemi e restituisci risultato
-func UnisciMultiInsiemi(A, B map[int][int])(AB map[int]int) {
+func UnisciMultiInsiemi(A, B map[int]int)(AB map[int]int) {
 	AB = map[int]int{}
 
 	// In questo caso valori associati alle chiavi servono per confronto

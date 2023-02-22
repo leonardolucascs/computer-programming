@@ -17,7 +17,13 @@ type Punto struct{
 }
 
 func main() {
-	//fmt.Println(NuovoTragitto())
+	fmt.Println(NuovoTragitto())
+	fmt.Println()
+
+	// ATTENZIONE: FUNZIONI CREATE CORRETTE E OPERANTI MA MAIN() INCOMPLETO
+	// 				NON SI RIESCE A VERIFICARE L'EFFETTIVO FUNZIONAMENTO DELLE FUNZIONI
+	//				NON SEGUE L'ESECUZIONE DATA DALLA TRACCIA D'ESAME
+
 
 	//punti := []Punto{{"A", 10, 11.3}, {"B", 11, -5.2}, {"C", 5, 3.4}}
 	//fmt.Println("\ndx:", Distanza(punti[0], punti[1]))
@@ -43,7 +49,7 @@ func NuovoTragitto()(tragitto []Punto){
 	return tragitto
 }
 
-// Parser per stringa letta in "oggetto" di tipo Punto
+// Parser per stringa letta in variabile di tipo Punto
 func convertiInput(str []string) Punto{
 	
 	var tmp Punto

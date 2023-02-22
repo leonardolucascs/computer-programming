@@ -20,18 +20,16 @@ func main() {
 	
 	tragitto := []Punto{
 		{"A", 10, 11.3},
-		{"B", 11, -5.2},
-		{"C", 5, 3.4}
-	}
+		{"B", 11, -5.2}, 
+		{"C", 5, 3.4}}
 	
+	// TEST CASE:
 	//fmt.Println(NuovoTragitto())
-	//fmt.Println("\ndx:", Distanza(punti[0], punti[1]))
-
+	fmt.Println("DELTA:", Distanza(tragitto[0], tragitto[1]))	// OUTPUT non formattato a 2 cifre decimali
 	fmt.Println("Lunghezza tragitto: ", Lunghezza(tragitto))
-
 	//fmt.Println(StringPunto(punti[0]))
-
 	//StampaTragitto(punti)
+	// FINE - TEST CASE
 
 	// Per redirezione input da file oppure dall'utente, uncomment riga sotto
 	//StampaTragitto(NuovoTragitto())
@@ -80,7 +78,7 @@ func Distanza(p1, p2 Punto) float64 {
 
 	x := math.Pow(math.Pow(tmp1, 2) + math.Pow(tmp2, 2), 0.5)
 	
-	arrotondaN(&x)	// Utilizzo pattern indirizzo-puntatore, al posto che ricevere un output
+	//arrotondaN(&x)	// Utilizzo pattern indirizzo-puntatore, al posto che ricevere un output
 	//fmt.Println(x)
 	
 	return x
@@ -114,4 +112,9 @@ func StampaTragitto(tragitto []Punto) {
 	for _, punto := range tragitto {
 		fmt.Println(StringPunto(punto))
 	}
+}
+
+func arrotondaN(n *float64){
+
+	*n = math.Round(*n * 100)/100
 }
